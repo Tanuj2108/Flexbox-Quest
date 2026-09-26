@@ -1,0 +1,194 @@
+*{
+box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #897ddb; /* midnight purple */
+  color: rgb(255, 254, 254) 5ff;
+}
+.game-header{
+  display: flex;
+  justify-content:  space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 24px ;   
+  background-color: #172554;
+  color: white;  
+}
+
+.game-info, .game-action{
+  display:flex;
+  gap: 12px;
+}
+
+.game-area{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 15px;
+  padding: 24px;
+}
+
+.scene-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.game-panels{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 2px;
+
+}
+
+.game-panels h2{
+  width: 100%;
+  margin: 2px;
+}
+
+
+.panel h3 {
+  margin-top: 10px;
+}
+
+.game-panels > .panel{
+  border-radius: 12px;
+  padding: 20px;
+  border: 2px solid;
+  flex: 1;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.control-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.controls h3 {
+  margin: 0 0 10px;
+  align-self: flex-start;
+}
+
+.inventory-items {
+  display: flex;
+  gap: 10px;
+}
+
+.item {
+  padding: 12px;
+  border: 2px solid;
+  border-radius: 8px;
+}
+
+.inventory h3 {
+  align-self: flex-start;
+}
+
+.collect,
+.find,
+.defeat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+
+
+
+
+.player,
+.star,
+.platform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+
+
+.player {
+  width: 100px;
+  height: 56px;
+}
+
+.star {
+  width: 60px;
+  height: 56px;
+}
+
+.platform {
+  width: 160px;
+  min-height: 28px;
+}
+
+.game-action button,
+.controls button {
+  padding: 10px 14px;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.control-row button {
+  width: 44px;
+  height: 44px;
+}
+
+.jump-button {
+  width: 120px;
+}
+
+@media (max-width: 768px) {
+  .game-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .game-info {
+    flex-wrap: wrap;
+  }
+
+  .game-action {
+    align-self: flex-start;
+  }
+
+  .game-panels {
+    flex-direction: column;
+  }
+
+  .game-panels > .panel {
+    width: 100%;
+  }
+
+  .scene-row {
+    gap: 12px;
+  }
+
+  .platform {
+    width: 120px;
+  }
+}
+
+
